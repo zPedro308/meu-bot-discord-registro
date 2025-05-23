@@ -135,7 +135,7 @@ client.on('interactionCreate', async (interaction) => {
     const canalLogs = await client.channels.fetch('1369350793181925428');
 
     if (action === 'aceitar' && membro) {
-      const nick = `「13°BPM/M」SD-2ª ${nome}「${id}」`.slice(0, 32);
+      const nick = `「44°BPM/M」SD-2ª ${nome}「${id}」`.slice(0, 32);
       await membro.setNickname(nick).catch(() => null);
 
       const cargos = ['1369351572672221316', '1369351969088606340', '1369351979540680804', '1369352702319923320'];
