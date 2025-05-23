@@ -56,7 +56,7 @@ client.on('interactionCreate', async (interaction) => {
           .setStyle(ButtonStyle.Primary)
       );
 
-      const canal = await client.channels.fetch('1369350481297801216');
+      const canal = await client.channels.fetch('1374263024021405696');
       if (canal) await canal.send({ embeds: [embed], components: [row] });
 
       await interaction.reply({ content: '✅ Painel de registro enviado com sucesso!', ephemeral: true });
