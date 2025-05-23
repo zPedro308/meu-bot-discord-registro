@@ -138,7 +138,7 @@ client.on('interactionCreate', async (interaction) => {
       const nick = `「44°BPM/M」SD-2ª ${nome}「${id}」`.slice(0, 32);
       await membro.setNickname(nick).catch(() => null);
 
-      const cargos = ['1374262898368708628', '1374262880979128360', '1374262840030134317', '1374262839270969344'];
+      const cargos = ['1374262898368708628', '1374262880979128360', '1374262840030134317', '1374262839270969344', '1374262802008772729'];
       for (const c of cargos) await membro.roles.add(c).catch(() => null);
 
       await interaction.update({ content: `✅ Registro aceito por ${interaction.user}`, embeds: [], components: [] });
