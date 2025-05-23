@@ -114,7 +114,7 @@ client.on('interactionCreate', async (interaction) => {
         .setStyle(ButtonStyle.Danger)
     );
 
-    const canal = await client.channels.fetch('1369350481297801216');
+    const canal = await client.channels.fetch('1374263024021405696');
     if (canal) await canal.send({ embeds: [embed], components: [row] });
 
     await interaction.reply({ content: '📨 Sua solicitação foi enviada com sucesso!', ephemeral: true });
@@ -132,7 +132,7 @@ client.on('interactionCreate', async (interaction) => {
     const nome = embed.fields[0].value;
     const id = embed.fields[1].value;
     const membro = await interaction.guild.members.fetch(userId).catch(() => null);
-    const canalLogs = await client.channels.fetch('1369350793181925428');
+    const canalLogs = await client.channels.fetch('1374263027733631016');
 
     if (action === 'aceitar' && membro) {
       const nick = `「44°BPM/M」SD-2ª ${nome}「${id}」`.slice(0, 32);
