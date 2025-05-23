@@ -124,7 +124,7 @@ client.on('interactionCreate', async (interaction) => {
     const [action, , userId] = interaction.customId.split('_');
     if (!['aceitar', 'negar'].includes(action)) return;
 
-    if (!interaction.member.roles.cache.has('1369352062613061763')) {
+    if (!interaction.member.roles.cache.has('1374262850150989965')) {
       return interaction.reply({ content: '🚫 Você não tem permissão para isso.', ephemeral: true });
     }
 
