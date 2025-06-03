@@ -132,7 +132,7 @@ client.on('interactionCreate', async (interaction) => {
     const nome = embed.fields[0].value;
     const id = embed.fields[1].value;
     const membro = await interaction.guild.members.fetch(userId).catch(() => null);
-    const canalLogs = await client.channels.fetch('1379499840043487262');
+    const canalLogs = await client.channels.fetch('1379514289387212862');
 
     if (action === 'aceitar' && membro) {
       const nick = `「COE」REC ${nome}「${id}」`.slice(0, 32);
