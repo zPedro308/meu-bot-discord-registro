@@ -45,7 +45,7 @@ client.on('interactionCreate', async (interaction) => {
           '📌 Certifique-se de preencher corretamente:\n' +
           '> 🔹 Nome In-Game\n> 🔹 ID In-Game\n\n' +
           '⏳ Sua solicitação será analisada por um membro autorizado.\n\n' +
-          '**Boa sorte, recruta!** 🚓'
+          '**Coloque somente seu SOBRENOME no lugar de Nome, Boa sorte, recruta!** 🚓'
         )
         .setColor(0x2f3136);
 
