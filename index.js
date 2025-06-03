@@ -38,9 +38,9 @@ client.on('interactionCreate', async (interaction) => {
   if (interaction.isChatInputCommand()) {
     if (interaction.commandName === 'enviarpainelregistro') {
       const embed = new EmbedBuilder()
-        .setTitle('Sistema de Registro - PMESP')
+        .setTitle('Sistema de Registro - COE')
         .setDescription(
-          '👮‍♂️ Bem-vindo ao sistema de registro da **Polícia Militar**!\n\n' +
+          '👮‍♂️ Bem-vindo ao sistema de registro da **COE**!\n\n' +
           '📝 Clique no botão abaixo para iniciar seu processo de registro.\n\n' +
           '📌 Certifique-se de preencher corretamente:\n' +
           '> 🔹 Nome In-Game\n> 🔹 ID In-Game\n\n' +
@@ -124,7 +124,7 @@ client.on('interactionCreate', async (interaction) => {
     const [action, , userId] = interaction.customId.split('_');
     if (!['aceitar', 'negar'].includes(action)) return;
 
-    if (!interaction.member.roles.cache.has('1379499850298822890')) {
+    if (!interaction.member.roles.cache.has('1379514289387212862')) {
       return interaction.reply({ content: '🚫 Você não tem permissão para isso.', ephemeral: true });
     }
 
