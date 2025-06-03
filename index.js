@@ -114,7 +114,7 @@ client.on('interactionCreate', async (interaction) => {
         .setStyle(ButtonStyle.Danger)
     );
 
-    const canal = await client.channels.fetch('1379499850298822890');
+    const canal = await client.channels.fetch('1379514289387212862');
     if (canal) await canal.send({ embeds: [embed], components: [row] });
 
     await interaction.reply({ content: '📨 Sua solicitação foi enviada com sucesso!', ephemeral: true });
@@ -124,7 +124,7 @@ client.on('interactionCreate', async (interaction) => {
     const [action, , userId] = interaction.customId.split('_');
     if (!['aceitar', 'negar'].includes(action)) return;
 
-    if (!interaction.member.roles.cache.has('1379514289387212862')) {
+    if (!interaction.member.roles.cache.has('1379499840043487262')) {
       return interaction.reply({ content: '🚫 Você não tem permissão para isso.', ephemeral: true });
     }
 
