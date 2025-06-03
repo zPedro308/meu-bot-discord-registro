@@ -56,7 +56,7 @@ client.on('interactionCreate', async (interaction) => {
           .setStyle(ButtonStyle.Primary)
       );
 
-      const canal = await client.channels.fetch('1374263024021405696');
+      const canal = await client.channels.fetch('1379503563805425704');
       if (canal) await canal.send({ embeds: [embed], components: [row] });
 
       await interaction.reply({ content: '✅ Painel de registro enviado com sucesso!', ephemeral: true });
@@ -114,7 +114,7 @@ client.on('interactionCreate', async (interaction) => {
         .setStyle(ButtonStyle.Danger)
     );
 
-    const canal = await client.channels.fetch('1374263024021405696');
+    const canal = await client.channels.fetch('1379503563805425704');
     if (canal) await canal.send({ embeds: [embed], components: [row] });
 
     await interaction.reply({ content: '📨 Sua solicitação foi enviada com sucesso!', ephemeral: true });
@@ -124,7 +124,7 @@ client.on('interactionCreate', async (interaction) => {
     const [action, , userId] = interaction.customId.split('_');
     if (!['aceitar', 'negar'].includes(action)) return;
 
-    if (!interaction.member.roles.cache.has('1374262850150989965')) {
+    if (!interaction.member.roles.cache.has('1379499095680483398')) {
       return interaction.reply({ content: '🚫 Você não tem permissão para isso.', ephemeral: true });
     }
 
@@ -132,13 +132,13 @@ client.on('interactionCreate', async (interaction) => {
     const nome = embed.fields[0].value;
     const id = embed.fields[1].value;
     const membro = await interaction.guild.members.fetch(userId).catch(() => null);
-    const canalLogs = await client.channels.fetch('1374263027733631016');
+    const canalLogs = await client.channels.fetch('1379499881130885240');
 
     if (action === 'aceitar' && membro) {
       const nick = `「44°BPM/M」SD-2ª ${nome}「${id}」`.slice(0, 32);
       await membro.setNickname(nick).catch(() => null);
 
-      const cargos = ['1374262898368708628', '1374262880979128360', '1374262840030134317', '1374262839270969344', '1374262802008772729'];
+      const cargos = ['1379499600808771674', '1379499590419611767', '1379499611026362441', 'tag', 'tag'];
       for (const c of cargos) await membro.roles.add(c).catch(() => null);
 
       await interaction.update({ content: `✅ Registro aceito por ${interaction.user}`, embeds: [], components: [] });
